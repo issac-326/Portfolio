@@ -1,29 +1,32 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/util';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Acerca de mi">
 	<main>
-		<h1 class="text-gradient mt-9" id="aboutMe">Acerca de mi</h1>
+		<h1 class="text-gradient mt-9" id="aboutMe">{t('nav.aboutMe')}</h1>
 		<p class="instructions">
-			Desde siempre, la fascinación por las computadoras ha sido una constante en mi vida. El funcionamiento de los programas y el porqué de sus acciones han alimentado mi curiosidad, y es esta pasión la que me llevó a estudiar ingeniería en sistemas.
+			{t('text.aboutMe')}
 			<br>
-			Me considero un entusiasta de la informática, siempre dispuesto a aprender y explorar nuevas áreas del campo. Tengo la habilidad de crear y colaborar en equipo, y busco superarme constantemente mientras mantengo una mente abierta a las últimas tendencias profesionales.
+			{t('text.aboutMe2')}
 			<br>
-			Fuera del estudio y la programación, disfruto de mi tiempo libre leyendo libros, tocando la guitarra, aprendiendo nuevas habilidades y jugando videojuegos.
+			{t('text.aboutMe3')}
+		</p>
+		<h1 class="text-gradient" id="skills">{t('nav.skills')}</h1>
+		<p class="instructions">
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
+			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
 			
 		</p>
-		<h1 class="text-gradient" id="skills">Habilidades</h1>
-		<p class="instructions">
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
-			
-		</p>
-		<h1 class="text-gradient" id="proyects">Proyectos</h1>
+		<h1 class="text-gradient" id="proyects">{t('nav.proyects')}</h1>
 		<p class="instructions">
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?
 			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam magnam possimus natus eaque aliquam laboriosam eligendi ex reprehenderit temporibus! Dolor architecto neque, distinctio laboriosam asperiores beatae consequatur corrupti reprehenderit expedita?

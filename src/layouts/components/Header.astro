@@ -1,0 +1,52 @@
+---
+import { Image } from 'astro:assets';
+import profileImage from '/perfil.jfif'
+import HeaderButton from './HeaderButton.astro';
+import { getLangFromUrl, useTranslations } from '../../i18n/util';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+
+export function onClickUnderline(event: MouseEvent) {
+    event.preventDefault(); // Evita que se siga el enlace
+    const target = event.currentTarget as HTMLElement;
+
+    // Remover subrayado de otros enlaces
+    document.querySelectorAll('.active').forEach(link => {
+        link.classList.remove('active');
+    });
+
+    // Añadir subrayado al enlace seleccionado
+    target.classList.add('active');
+}
+---
+
+<div class="flex justify-center mb-3">
+    <header class="fixed ">
+
+        <nav class=" mx-auto p-4 w-[800px] flex justify-between items-center bg-black-custom h-[50px]">
+            <div>
+                <a class='p-3'>
+                    <Image src={profileImage} alt="Perfil" width={32} height={32} class="rounded-full w-11 border-white border-2 shadow-lg" /> 
+                </a>
+            </div>
+            <div class="border border-gray-600 rounded-full text-gray-200 flex text-sm h-[44px] items-center">
+                <HeaderButton href={`/${lang}/#aboutMe`} class="ml-4"> {t('nav.aboutMe')} </HeaderButton>
+                <HeaderButton href={`/${lang}/#skills`} >{t('nav.skills')}</HeaderButton>
+                <HeaderButton href={`/${lang}/#proyects`} >{t('nav.proyects')}</HeaderButton>
+            </div>
+            <div class="flex">
+                <img src="/_image?href=%2F%40fs%2FC%3A%2FUsers%2Fissac%2FDocuments%2Fguia+portafolio%2Fdevolio%2Fsrc%2Fassets%2Fimg%2Fgithub-mark-white.svg%3ForigWidth%3D98%26origHeight%3D96%26origFormat%3Dsvg&amp;w=24&amp;h=24&amp;f=svg" data-image-component="true" alt="Github logo" width="24" height="24" loading="lazy" decoding="async" data-astro-source-file="C:/Users/issac/Documents/guia portafolio/devolio/node_modules/.pnpm/astro@4.14.2_typescript@5.5.4/node_modules/astro/components/Image.astro" data-astro-source-loc="38:2" class="mr-4">
+                <a href=`${t('nav.url')}`>
+                    <img alt="Español" loading="lazy" width="30" height="25" decoding="async" data-nimg="1" class="mr-4" style="color:transparent" src=`${t('nav.img')}`>
+                </a>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon mr-4" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="#597e8d" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z" />
+                </svg>
+            </div>
+        </nav>
+
+    </header>
+</div>
