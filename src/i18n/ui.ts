@@ -9,6 +9,7 @@ export const languages = {
     en: {
       'nav.aboutMe': 'About me',
       'nav.img': 'https://flagcdn.com/us.svg',
+      'nav.nam': 'EN',
       'nav.url': '/es',
       'nav.skills': 'Skills',
       'nav.proyects': 'Proyects',
@@ -20,7 +21,8 @@ export const languages = {
     es: {
       'nav.aboutMe': 'Sobre mi',
       'nav.url': '/en',
-      'nav.img': `https://flagcdn.com/es.svg`,
+      'nav.img': 'https://flagcdn.com/mx.svg',
+      'nav.nam': 'ES',
       'nav.skills': 'Habilidades',
       'nav.proyects': 'Proyectos',
       'text.aboutMe':`Desde siempre, la fascinación por las computadoras ha sido una constante en mi vida. El funcionamiento de los programas y el porqué de sus acciones han alimentado mi curiosidad, y es esta pasión la que me llevó a estudiar ingeniería en sistemas.`,
