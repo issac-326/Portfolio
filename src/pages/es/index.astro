@@ -7,7 +7,7 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<Layout title="Acerca de mi">
+<Layout title="Acerca de mi" >
 	<main>
 		<h1 class="text-gradient mt-9" id="aboutMe">{t('nav.aboutMe')}</h1>
 		<p class="text-gray-800">
@@ -147,3 +147,13 @@ const t = useTranslations(lang);
 		padding: 0;
 	}
 </style>
+<script  is:inline>
+	// Lee el tema desde localStorage y aplica la clase correspondiente
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme");
+        console.log("me haz jodido la vida");
+        if (savedTheme) { 
+            document.documentElement.classList.toggle("dark", savedTheme === "dark");
+        }
+    });
+</script>

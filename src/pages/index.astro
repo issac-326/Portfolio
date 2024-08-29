@@ -98,3 +98,13 @@ import Card from '../components/Card.astro';
 		padding: 0;
 	}
 </style>
+<script  is:inline>
+	// Lee el tema desde localStorage y aplica la clase correspondiente
+    document.addEventListener("DOMContentLoaded", () => {
+        const savedTheme = localStorage.getItem("theme");
+        console.log("me haz jodido la vida");
+        if (savedTheme) { 
+            document.documentElement.classList.toggle("dark", savedTheme === "dark");
+        }
+    });
+</script>
