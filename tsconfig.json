@@ -8,11 +8,6 @@
       "@/*": [
         "./src/*"
       ],
-      "@components/*": [
-        "src/components/*",
-      ],
-      "@layouts-components/*": ["src/layouts/components/*"],
-      "@pages-components/*": ["src/pages/components/*"],
     }
   }
 }
