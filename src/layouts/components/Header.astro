@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 import profileImage from '/perfil.jfif'
 import HeaderButton from './HeaderButton.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/util';
-import '../../../.src/styles/globals.css'
+import '../../../.src/styles/globals.css';
 import { ModeToggle } from '../../components/ModeToggle.tsx';
 
 const lang = getLangFromUrl(Astro.url);
@@ -78,4 +78,3 @@ const t = useTranslations(lang);
         localStorage.setItem("theme", theme);
     });
 </script>
-

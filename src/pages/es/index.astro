@@ -2,7 +2,8 @@
 import Layout from '../../layouts/Layout.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/util';
 import Logos from '../components/Logos.astro';
-import Proyects from '../components/Proyects.astro';
+import Proyects from '../components/Projects';
+import { Routes, Route } from 'react-router-dom';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -21,7 +22,7 @@ const t = useTranslations(lang);
 		<h1 class=" text-gradient mt-12" id="skills">{t('nav.skills')}</h1>
 		<Logos />
 		<h1 class="text-gradient mt-12" id="proyects">{t('nav.proyects')}</h1>
-		<Proyects />
+		<Proyects client:load/>
 		
 	</main>
 </Layout>
