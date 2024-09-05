@@ -3,7 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import { getLangFromUrl, useTranslations } from '../../i18n/util';
 import Logos from '../components/Logos.astro';
 import Proyects from '../components/Projects';
-import { Routes, Route } from 'react-router-dom';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
