@@ -30,7 +30,7 @@ export default function Projects() {
                     <CardTitle>Portafolio</CardTitle>
                 </CardHeader>
                 <CardContent>
-                    Portafolio personal para ver mis proyectos y habilidades en desarrollo web.
+                    {t('project1')}
                 </CardContent>
                 <CardFooter className="flex flex-col gap-6 items-start">
                     <div className="flex flex-row gap-2 flex-wrap">
@@ -83,7 +83,7 @@ export default function Projects() {
                         <CardTitle>Netflix</CardTitle>
                     </CardHeader>
                     <CardContent>
-                        Proyecto hecho con compañeros en la universidad en larabel y springboot
+                        {t('project2')}
                     </CardContent>
                     <CardFooter className="flex flex-col gap-6 items-start">
                         <div className="flex flex-row gap-2 flex-wrap">
