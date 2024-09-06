@@ -24,7 +24,7 @@ const { title } = Astro.props;
 		<ViewTransitions />
 	</head> 
 	<body class="bg-slate-200 dark:bg-black-custom dark:text-gray-100">
-		<Header />
+		<Header/>
 		<slot />
 	</body>
 	
@@ -32,8 +32,7 @@ const { title } = Astro.props;
 <style is:global>
 	
 	.selected {
-		font-weight: bold;
-		color: azure;
+
 	}
 
 	:root {
