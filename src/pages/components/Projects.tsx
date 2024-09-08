@@ -5,22 +5,21 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button'; 
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from 'embla-carousel-autoplay';
+import { useState, useEffect } from 'react';
 import { getLangFromUrl, useTranslations } from '../../i18n/util';
-import React from 'react';
-import { useParams } from 'react-router-dom';
 
-type Language = 'en' | 'es';
-
-const getValidLanguage = (lang: string): Language => {
-  const validLanguages: Language[] = ['en', 'es'];
-  return validLanguages.includes(lang as Language) ? (lang as Language) : 'en';
-};
 export default function Projects() {
 
-    const { lang } = useParams<{ lang: string }>();
-    const language = lang ? getValidLanguage(lang) : 'en';
+    const [lang, setLang] = useState<'en' | 'es'>('en'); // Idiomas soportados
 
-    const t = useTranslations(language);
+    // Obtener el idioma de la URL
+    useEffect(() => {
+        const url = new URL(window.location.href);
+        const detectedLang = getLangFromUrl(url);
+        setLang(detectedLang);
+    }, []);
+      // Usar traducciones basadas en el idioma detectado
+    const t = useTranslations(lang);
 
     return (
         <div className="grid grid-cols-3 gap-5">
