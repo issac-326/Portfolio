@@ -100,6 +100,7 @@ export default function Projects() {
                         </div>
                     </CardFooter>
                 </Card>
+            {/*
             <Card className="overflow-hidden shadow-lg bg-slate-300 dark:bg-black-card">
                 <CardHeader>
                     <CardTitle>Billy bounce</CardTitle>
@@ -125,6 +126,7 @@ export default function Projects() {
                     </div>
                 </CardFooter>
             </Card>
+            */}
         </div>
     )
 }
