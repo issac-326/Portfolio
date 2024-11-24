@@ -23,7 +23,7 @@ const { title } = Astro.props;
 		<title>{title}</title>
 		<ViewTransitions />
 	</head> 
-	<body class="bg-slate-200 dark:bg-gray-900 dark:text-gray-100">
+	<body class="bg-gray-900 text-gray-100">
 		<Header/>
 		<slot />
 	</body>
@@ -47,13 +47,7 @@ const { title } = Astro.props;
 		);
 	}
 
-	html {
-		font-family: system-ui, sans-serif;
-    	color: #1f2937; /* Un gris oscuro para el texto */
-		scroll-behavior: smooth;
-	}
-
-	html.dark {
+	html{
 		font-family: system-ui, sans-serif;
 		background: #13151a;
 		color: white;
