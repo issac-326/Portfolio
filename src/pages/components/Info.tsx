@@ -42,7 +42,7 @@ export default function Info() {
           </CardHeader>
           <CardContent className="space-y-4">
             <p className="text-sm sm:text-base">{t('info.text2')}</p>
-            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm sm:text-base">
+            <ul className="list-disc pl-5 space-y-2 text-gray-300 text-sm sm:text-base"> 
               <li>{t('info.ubicacion')}</li>
               <li>{t('info.age')}</li>
               <li>{t('info.lenguaje')}</li>
