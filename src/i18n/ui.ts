@@ -18,6 +18,7 @@ export const languages = {
       'text.aboutMe3': 'Outside of studying and programming, I spend my free time reading books, learning new skills, and playing video games.',
       'project1': 'Personal portfolio created with Astro, Tailwind, React, and TypeScript',
       'project2': 'Netflix clone created with university classmates using Laravel and Spring Boot',
+      'project3': 'An app where you can post rescued animals for adoption, with a messaging system between users.',
       'info.text': 'A glimpse of who I am and what I’m passionate about.',
       'info.text2': 'I am a creative and solution-oriented web developer with a passion for building intuitive and engaging digital experiences.',
       'info.ubicacion': 'Location: Francisco Morazan, HN',
@@ -29,7 +30,8 @@ export const languages = {
       'info.work': 'IT Support Technician',
       'info.list1': 'Data maintenance and backup: Performed system and equipment backups, ensuring the security and availability of information.',
       'info.list2': 'Workstation upgrades: Replaced employee computers, migrating data and settings to ensure operational continuity.',
-      'info.list3': 'Hardware and software configuration: Set up new devices, including software installation and user-specific customization.'
+      'info.list3': 'Hardware and software configuration: Set up new devices, including software installation and user-specific customization.',
+      'footer.findMe': 'Find me in my networks Or send me a email'
     },
     es: {
       'nav.aboutMe': 'Sobre mi',
@@ -43,6 +45,7 @@ export const languages = {
       'text.aboutMe3': 'Fuera del estudio y la programación, disfruto de mi tiempo libre leyendo libros, aprendiendo nuevas habilidades y jugando videojuegos.',
       'project1': 'Portafolio personal creado con Astro, Tailwind, React y TypeScript',
       'project2': 'Copia de Netflix hecho con compañeros en la universidad hecho en Laravel y Spring Boot',
+      'project3': 'App para publicar animales rescatados para adopción, con un sistema de mensajería',
       'info.text':'Un vistazo a quién soy y qué me apasiona.',
       'info.text2':'Soy un desarrollador web creativo y orientado a soluciones, con una pasión por construir experiencias digitales intuitivas y atractivas.',
       'info.ubicacion': 'Ubicación: Francisco Morazan, HN',
@@ -54,6 +57,7 @@ export const languages = {
       'info.work': 'Técnico de Soporte en TI (Práctica profesional)',
       'info.list1': 'Mantenimiento y respaldo de datos: Realización de copias de seguridad (backup) de sistemas y equipos, garantizando la seguridad y disponibilidad de la información.',
       'info.list2': 'Actualización de equipos de trabajo: Sustitución de computadoras para los empleados, migrando datos y configuraciones para asegurar la continuidad operativa.',
-      'info.list3': 'Configuración de hardware y software: Configuración inicial de equipos, incluyendo instalación de aplicaciones requeridas y ajustes personalizados para los usuarios.'
+      'info.list3': 'Configuración de hardware y software: Configuración inicial de equipos, incluyendo instalación de aplicaciones requeridas y ajustes personalizados para los usuarios.',
+      'footer.findMe': 'Buscame en mis redes o enviame un correo'    
     },
   } as const;
