@@ -11,24 +11,26 @@ const t = useTranslations(lang);
 ---
 
 <Layout title="Acerca de mi">
-	<main>
-		<div
-			class="container mx-auto py-10 min-h-screen bg-gray-900 text-gray-100"
-		>
-			<h1 class="text-xs font-bold text-center mb-6 text-blue-300" id="aboutMe">
-				Issac Aguilar
-			</h1>
-			<Info client:load/>
-
-			<h1 class="text-gradient mt-12" id="skills">{t("nav.skills")}</h1>
-			<Logos />
-			<h1 class="text-gradient mt-12" id="proyects">
-				{t("nav.proyects")}
-			</h1>
-			<Proyects client:load />
-			<Footer />
+	<main class="bg-gray-900 text-gray-100 min-h-screen">
+		<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+		  <h1 class="text-sm sm:text-base md:text-lg font-bold text-center mb-6 sm:mb-8 text-blue-300" id="aboutMe">
+			Issac Aguilar
+		  </h1>
+		  <Info client:load/>
+  
+		  <h2 class="text-2xl sm:text-3xl md:text-4xl text-blue-300 font-bold text-center mt-10 sm:mt-12 md:mt-16 mb-6 sm:mb-8" id="skills">
+			{t("nav.skills")}
+		  </h2>
+		  <Logos />
+  
+		  <h2 class="text-2xl sm:text-3xl md:text-4xl text-blue-300 text-center font-bold mt-10 sm:mt-12 md:mt-16 mb-6 sm:mb-8" id="proyects">
+			{t("nav.proyects")}
+		  </h2>
+		  <Proyects client:load/>
+  
+		  <Footer />
 		</div>
-	</main>
+	  </main>
 
 	<style>
 		.highlight-on-hover:hover {
@@ -64,7 +66,7 @@ const t = useTranslations(lang);
 			text-align: center;
 			margin-bottom: 1em;
 		}
-		.text-gradient {
+		.{
 			background-image: var(--accent-gradient);
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;

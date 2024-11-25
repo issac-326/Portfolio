@@ -31,7 +31,7 @@ export default function Info() {
           value="experience" 
           className="data-[state=active]:bg-gray-900 data-[state=active]:text-gray-100 text-gray-400 py-2 sm:py-3"
         >
-          Experiencia
+          {t('exp')}
         </TabsTrigger>
       </TabsList>
       <TabsContent value="about">
